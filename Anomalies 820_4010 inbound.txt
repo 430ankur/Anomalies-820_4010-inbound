@@ -1,0 +1,24 @@
+<ns8:HeaderSeqNo>(FOR SURE)
+                <xsl:value-of select="$gvarOutput_CMRS_GBL_Dashboard_GetSeqNo.OutputMessage/ns1:OutputMessage/ns1:DataArea/ns1:MasterSequence/ns1:SequenceNumber"/>
+              </ns8:HeaderSeqNo>
+
+
+
+
+<ns8:CustEDIID>//mapped this as per Souvik 
+            <xsl:value-of select="(normalize-space(/ns0:Transaction-820/ns0:Internal-Properties/ns0:Data-Structure[@Name = 'Interchange']/ns0:Lookup[@Name = 'InterchangeSenderID']))"/>
+          </ns8:CustEDIID>
+
+
+(NOT SURE)//mapped this
+ <ns8:EDIReceiverID>WRODGERS01</ns8:EDIReceiverID>//we are finding EDIReceiverID linked with properties in input xml file
+
+
+(NOT SURE)//mapped this
+<TotalAmountAfterDisc>No data found in input file
+
+(NOT SURE)//mapped this
+<Note/>No data found in input file
+
+(NOT SURE)//mapped this
+<AdjustmentReasonCode>No data found in input file
